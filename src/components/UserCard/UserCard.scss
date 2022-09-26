@@ -1,13 +1,16 @@
 .user-card {
-  min-width: 400px;
-  width: 44%;
-  display: flex;
+  width: 46%;
   background-color: #cbced9;
   padding: 30px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
+  border-radius: 4px;
+
+  @media (max-width: 820px) {
+    width: 100%;
+  }
 
   &__left {
     > h3 {

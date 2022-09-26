@@ -1,5 +1,7 @@
 import './UsersList.scss';
-import UserCard from '../../components/UserCard/UserCard';
+import UserCard from '../UserCard/UserCard';
+import Button from '../Button/Button';
+import { Link } from 'react-router-dom';
 
 const UsersList = () => {
   const users = [
@@ -16,10 +18,16 @@ const UsersList = () => {
   return (
     <section>
       <div className='user-list'>
+        <h1>redux toolkit</h1>
         <div className='container'>
-          {users.map((user) => (
-            <UserCard key={user.id} {...user} />
-          ))}
+          <Link to={'add-user'}>
+            <Button>Add User</Button>
+          </Link>
+          <div className='box'>
+            {users.map((user) => (
+              <UserCard key={user.id} {...user} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
