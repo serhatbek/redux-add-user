@@ -1,3 +1,4 @@
+import './UsersList.scss';
 import UserCard from '../../components/UserCard/UserCard';
 
 const UsersList = () => {
@@ -13,11 +14,15 @@ const UsersList = () => {
   }
 
   return (
-    <div className='user-list'>
-      {users.map((user) => (
-        <UserCard key={user.id} {...user} />
-      ))}
-    </div>
+    <section>
+      <div className='user-list'>
+        <div className='container'>
+          {users.map((user) => (
+            <UserCard key={user.id} {...user} />
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

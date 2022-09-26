@@ -4,11 +4,26 @@
   box-sizing: border-box;
 }
 
-
 body {
+  height: 100vh;
+  margin: 0;
   background: linear-gradient(
     283deg,
     rgba(167, 195, 215, 1) -40%,
     rgba(111, 77, 204, 1) 100%
   );
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }

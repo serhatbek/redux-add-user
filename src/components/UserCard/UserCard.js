@@ -1,19 +1,20 @@
+import './UserCard.scss';
 import { FaEdit, FaTrashAlt } from 'react-icons/fa';
 
 const UserCard = ({ name, email }) => {
   // const { id, name, email } = user;
   return (
     <div className='user-card'>
-      <div>
+      <div className='user-card__left'>
         <h3>{name}</h3>
         <span>{email}</span>
       </div>
-      <div>
+      <div className='user-card__right'>
         <button>
-          <FaEdit />
+          <FaEdit className='btn-icon' />
         </button>
         <button>
-          <FaTrashAlt />
+          <FaTrashAlt className='btn-icon' />
         </button>
       </div>
     </div>
