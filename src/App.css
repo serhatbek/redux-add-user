@@ -1,0 +1,14 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+body {
+  background: linear-gradient(
+    283deg,
+    rgba(167, 195, 215, 1) -40%,
+    rgba(111, 77, 204, 1) 100%
+  );
+}
