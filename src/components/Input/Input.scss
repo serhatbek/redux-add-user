@@ -1,0 +1,15 @@
+.input {
+  display: flex;
+  flex-direction: column;
+
+  > label {
+    color: aliceblue;
+    margin-bottom: 5px;
+  }
+
+  > input {
+    height: 50px;
+    width: 100%;
+    padding: 15px;
+  }
+}

@@ -9,8 +9,6 @@ const UsersList = () => {
     { id: 2, name: 'Rex', email: 'dino@gmail.com' },
   ];
 
-  // const renderCard = () => <div>Users Here</div>;
-
   if (!users.length) {
     return <p>No User</p>;
   }
@@ -19,15 +17,13 @@ const UsersList = () => {
     <section>
       <div className='user-list'>
         <h1>redux toolkit</h1>
-        <div className='container'>
-          <Link to={'add-user'}>
-            <Button>Add User</Button>
-          </Link>
-          <div className='box'>
-            {users.map((user) => (
-              <UserCard key={user.id} {...user} />
-            ))}
-          </div>
+        <Link to={'add-user'}>
+          <Button>Add User</Button>
+        </Link>
+        <div className='box'>
+          {users.map((user) => (
+            <UserCard key={user.id} {...user} />
+          ))}
         </div>
       </div>
     </section>

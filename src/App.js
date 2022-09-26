@@ -6,10 +6,12 @@ import AddUser from './components/AddUser/AddUser';
 function App() {
   return (
     <main>
-      <Routes>
-        <Route path='/redux-add-user/' element={<UsersList />} />
-        <Route path='/redux-add-user/add-user' element={<AddUser />} />
-      </Routes>
+      <div className='container'>
+        <Routes>
+          <Route path='/redux-add-user' element={<UsersList />} />
+          <Route path='/redux-add-user/add-user' element={<AddUser />} />
+        </Routes>
+      </div>
     </main>
   );
 }

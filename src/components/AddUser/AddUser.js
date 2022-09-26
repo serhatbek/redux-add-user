@@ -1,7 +1,12 @@
-import React from 'react';
+import AddUserForm from '../AddUserForm/AddUserForm';
+import './AddUser.scss';
 
 const AddUser = () => {
-  return <div>AddUser</div>;
+  return (
+    <section className='section__add-user'>
+      <AddUserForm />
+    </section>
+  );
 };
 
 export default AddUser;
