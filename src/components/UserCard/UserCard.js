@@ -7,10 +7,6 @@ import { deleteUser } from '../../features/userSlice';
 const UserCard = ({ id, name, email }) => {
   const dispatch = useDispatch();
 
-  // const handleDeleteUser = (id) => {
-  //   dispatch(deleteUser({ id: id }));
-  // };
-
   return (
     <div className='user-card'>
       <div className='user-card__left'>
