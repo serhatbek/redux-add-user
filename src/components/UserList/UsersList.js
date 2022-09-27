@@ -2,12 +2,12 @@ import './UsersList.scss';
 import UserCard from '../UserCard/UserCard';
 import Button from '../Button/Button';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const UsersList = () => {
-  const users = [
-    { id: 1, name: 'Luna', email: 'meowsalot@gmail.com' },
-    { id: 2, name: 'Rex', email: 'dino@gmail.com' },
-  ];
+  const users = useSelector((store) => store.users);
+
+  console.log(users);
 
   if (!users.length) {
     return <p>No User</p>;
