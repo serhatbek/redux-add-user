@@ -1,7 +1,8 @@
 import './UserCard.scss';
 import { FaEdit, FaTrashAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
-const UserCard = ({ name, email }) => {
+const UserCard = ({ id, name, email }) => {
   return (
     <div className='user-card'>
       <div className='user-card__left'>
@@ -9,12 +10,17 @@ const UserCard = ({ name, email }) => {
         <span>{email}</span>
       </div>
       <div className='user-card__right'>
-        <button>
-          <FaEdit className='btn-icon' />
-        </button>
-        <button>
-          <FaTrashAlt className='btn-icon' />
-        </button>
+        <Link to={`/redux-add-user/edit-user/${id}`}>
+          <button>
+            <FaEdit className='btn-icon' />
+          </button>
+        </Link>
+
+        <Link>
+          <button>
+            <FaTrashAlt className='btn-icon' />
+          </button>
+        </Link>
       </div>
     </div>
   );
