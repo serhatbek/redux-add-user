@@ -7,10 +7,15 @@ import { useSelector } from 'react-redux';
 const UsersList = () => {
   const users = useSelector((store) => store.users);
 
-  console.log(users);
-
   if (!users.length) {
-    return <p>No User</p>;
+    return (
+      <section className='user-list'>
+        <h1>No user, please enter users</h1>
+        <Link to={'add-user'}>
+          <Button>Add User</Button>
+        </Link>
+      </section>
+    );
   }
 
   return (

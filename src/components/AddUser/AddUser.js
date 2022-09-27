@@ -14,8 +14,7 @@ const AddUser = () => {
     email: '',
   });
 
-  const handleAddUser = (e) => {
-    e.preventDefault();
+  const handleAddUser = () => {
     setValues({ name: '', email: '' });
     dispatch(
       addUser({

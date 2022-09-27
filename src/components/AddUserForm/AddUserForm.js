@@ -2,7 +2,13 @@ import './AddUserForm.scss';
 import Input from '../Input/Input';
 import Button from '../Button/Button';
 
-const AddUserForm = ({ btnText, handleAddUser, values, setValues }) => {
+const AddUserForm = ({
+  btnText,
+  handleAddUser,
+  handleEditUser,
+  values,
+  setValues,
+}) => {
   return (
     <div className='add-user'>
       <Input
@@ -17,7 +23,11 @@ const AddUserForm = ({ btnText, handleAddUser, values, setValues }) => {
         onChange={(e) => setValues({ ...values, email: e.target.value })}
         inputProps={{ type: 'email', placeholder: 'meowsalot@gmail.com' }}
       />
-      <Button onClick={handleAddUser}>{btnText}</Button>
+      <Button
+        onClick={btnText === 'Edit User' ? handleEditUser : handleAddUser}
+      >
+        {btnText}
+      </Button>
     </div>
   );
 };

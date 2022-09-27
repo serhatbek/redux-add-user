@@ -1,8 +1,16 @@
 import './UserCard.scss';
 import { FaEdit, FaTrashAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { deleteUser } from '../../features/userSlice';
 
 const UserCard = ({ id, name, email }) => {
+  const dispatch = useDispatch();
+
+  // const handleDeleteUser = (id) => {
+  //   dispatch(deleteUser({ id: id }));
+  // };
+
   return (
     <div className='user-card'>
       <div className='user-card__left'>
@@ -17,7 +25,7 @@ const UserCard = ({ id, name, email }) => {
         </Link>
 
         <Link>
-          <button>
+          <button onClick={() => dispatch(deleteUser({ id: id }))}>
             <FaTrashAlt className='btn-icon' />
           </button>
         </Link>
